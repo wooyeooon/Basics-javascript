@@ -65,4 +65,68 @@ console.log(el); // <div class="child">1</div>
 const nodeList = document.querySeletorAll(".child");
 console.log(nodeList);
 nodeList.forEach((el) => console.log(el.textContent));
+
+console.log(Array.from(nodeList).reverse());
+```
+
+```javascript
+// N.parentElement
+
+// 노드의 부모 요소를 반환한다.
+
+const el = document.querySelector(".child");
+console.log(el.parentElement); // <div class"parent">..</div>
+```
+
+```javascript
+// E,closest()
+
+// 자신을 포함한 조상 요소 중 'CSS 선택자'와 일치하는,
+// 가장 가까운 요소를 반환한다.
+// 요소를 찾지 못하면, `null`값을 반환한다.
+
+const el = document.querySelect(".child");
+
+console.log(el.closest("div"));
+console.log(el.closest("body"));
+console.log(el.closest(".hello"));
+```
+
+```javascript
+// N.previousSivling / N.nextSivling
+
+// 노드의 이전 형제 혹은 다음 형제 노드를 반환한다.
+
+const el = document.querySelect(".child");
+console.log(el.previousSivling);
+console.log(el.nextSivling);
+```
+
+```javascript
+// E.previousElementSivling / E.nextElementSivling
+
+// 요소의 이전 형제 혹은 다음 형제 요소를 반환 한다.
+
+const el = document.querySelect(".child");
+console.log(el.previousElementSivling);
+console.log(el.nextElementSivling);
+```
+
+```javascript
+// E.chidren
+// 요소의 모든 자식 요소를 반환한다.
+cosnt el = document.querySelect('.parent)
+console.log(el.childeren)
+
+console.log(Array.from(el.childeren))
+```
+
+```javascript
+// E.firstElementchild / E.lastElementChild
+// 요소의 첫 번째 자식 혹은 마지막 자식 요소를 반환한다.
+
+const el = document.querySelect(".parent");
+
+console.log(el.firstElementChild);
+console.log(el.lastElementChild);
 ```
